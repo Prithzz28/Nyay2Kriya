@@ -16,65 +16,80 @@ Security model:
 
 ## Project Structure
 
-Frontend:
-- src/components/layout
-- src/components/ui
-- src/components/upload
-- src/components/review
-- src/components/actionplan
-- src/components/dashboard
-- src/pages
-- src/hooks
-- src/services
-- src/store
-- src/utils
-- src/styles
-
-Backend:
-- server/routes
-- server/controllers
-- server/services
-- server/middleware
-- server/utils
-- server/index.js
+```
+.
+├── frontend/              # React + Vite frontend application
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── hooks/
+│   │   ├── services/
+│   │   ├── store/
+│   │   ├── styles/
+│   │   └── utils/
+│   ├── public/
+│   ├── package.json
+│   └── vite.config.js
+│
+├── backend/               # Node.js + Express backend
+│   └── server/
+│       ├── controllers/
+│       ├── services/
+│       ├── routes/
+│       ├── middleware/
+│       ├── utils/
+│       ├── index.js
+│       └── package.json
+│
+├── package.json          # Root package.json for coordination
+└── README.md
+```
 
 ## Setup
 
-1. Install root dependencies
+### Install all dependencies
 
 ```bash
-npm install
+npm run install:all
 ```
 
-2. Install backend dependencies
+This will install:
+- Root dependencies (concurrently for running both servers)
+- Frontend dependencies
+- Backend dependencies
 
+### Configure environment variables
+
+1. Frontend (.env in frontend folder - if needed):
 ```bash
-cd server
-npm install
-cd ..
+VITE_API_BASE_URL=http://localhost:4000/api
 ```
 
-3. Configure environment variables
-
+2. Backend (backend/server/.env):
 ```bash
-copy .env.example .env
-copy server\.env.example server\.env
+GROQ_API_KEY=your_key_here
+GROQ_MODEL=llama-3.3-70b-versatile
+PORT=4000
+CORS_ORIGIN=http://localhost:5173,http://127.0.0.1:5173
 ```
 
-Update server env file:
-- GROQ_API_KEY=your_key_here
-- GROQ_MODEL=llama-3.3-70b-versatile
+### Running the project
 
-4. Start backend
-
+**Option 1: Run both frontend and backend together**
 ```bash
-npm run dev:server
+npm run dev
 ```
 
-5. Start frontend in a second terminal
+**Option 2: Run separately**
 
+Terminal 1 - Backend:
 ```bash
-npm run dev:client
+npm run dev:backend
+```
+
+Terminal 2 - Frontend:
+```bash
+npm run dev:frontend
 ```
 
 Frontend: http://localhost:5173
