@@ -1,0 +1,14 @@
+{
+  "name": "nyay2kriya-backend",
+  "version": "1.0.0",
+  "description": "Nyay2Kriya Backend - Judgment Intelligence System",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "cd server && npm run dev",
+    "start": "cd server && npm start",
+    "postinstall": "cd server && npm install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
