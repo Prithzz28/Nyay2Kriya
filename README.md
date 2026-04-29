@@ -1,4 +1,4 @@
-# CCMS Judgment Intelligence System
+# Nyay2Kriya - Judgment Intelligence System
 
 Production-ready web application for judgment intake, legal data structuring, human review, operational action planning, and approved-case monitoring.
 
