@@ -1,0 +1,45 @@
+.table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  border-radius: 10px;
+}
+
+.gov-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.gov-table th,
+.gov-table td {
+  border-bottom: 1px solid var(--border);
+  padding: 10px 12px;
+  vertical-align: top;
+  font-size: 13px;
+  text-align: left;
+}
+
+.gov-table th {
+  background: var(--surface-muted);
+  font-weight: 600;
+  color: var(--text);
+}
+
+.gov-table tbody tr:hover {
+  background: var(--surface-alt);
+}
+
+.expanded-row td {
+  background: var(--surface-alt);
+}
+
+.expanded-content {
+  display: grid;
+  gap: 6px;
+}
+
+.expanded-content strong {
+  color: var(--text);
+}
