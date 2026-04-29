@@ -16,9 +16,8 @@
    - **Name**: `nyay2kriya-backend`
    - **Runtime**: Node
    - **Root Directory**: `backend`
-   - **Build Command**: `cd server && npm ci`
-   - **Start Command**: `cd server && npm start`
    - **Plan**: Free (or paid for better performance)
+   - Render will automatically use `Procfile` for build/start commands
 
 3. **Environment Variables**
    Set the following in Render dashboard:

@@ -8,7 +8,8 @@
   },
   "scripts": {
     "dev": "cd server && npm run dev",
-    "start": "npm start --prefix server"
+    "start": "cd server && npm start",
+    "postinstall": "cd server && npm install --production"
   },
   "keywords": [],
   "author": "",

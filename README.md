@@ -114,8 +114,7 @@ Backend: http://localhost:5000
 ### Backend - Render
 - Deployed at: **https://nyay2kriya.onrender.com**
 - Root Directory: `backend`
-- Build command: `cd server && npm ci`
-- Start command: `cd server && npm start`
+- Uses Procfile for deployment configuration
 - Environment variables:
   - `PORT=5000`
   - `CORS_ORIGIN=http://localhost:5173,http://127.0.0.1:5173,https://nyay2-kriya.vercel.app,https://nyay2kriya.onrender.com`
