@@ -60,17 +60,25 @@ This will install:
 
 ### Configure environment variables
 
-1. Frontend (.env in frontend folder - if needed):
+1. Frontend (.env in frontend folder):
+
+**Local Development:**
 ```bash
-VITE_API_BASE_URL=http://localhost:4000/api
+VITE_API_BASE_URL=http://localhost:5000/api
+```
+
+**Production:**
+```bash
+VITE_API_BASE_URL=https://nyay2kriya.onrender.com/api
 ```
 
 2. Backend (backend/server/.env):
 ```bash
+PORT=5000
+CORS_ORIGIN=http://localhost:5173,http://127.0.0.1:5173,https://nyay2-kriya.vercel.app,https://nyay2kriya.onrender.com
 GROQ_API_KEY=your_key_here
 GROQ_MODEL=llama-3.3-70b-versatile
-PORT=4000
-CORS_ORIGIN=http://localhost:5173,http://127.0.0.1:5173
+OCR_SPACE_API_KEY=your_key_here
 ```
 
 ### Running the project
@@ -93,7 +101,25 @@ npm run dev:frontend
 ```
 
 Frontend: http://localhost:5173
-Backend: http://localhost:4000
+Backend: http://localhost:5000
+
+## Deployment
+
+### Frontend - Vercel
+- Deployed at: **https://nyay2-kriya.vercel.app**
+- Build command: `npm run build`
+- Environment variables: `VITE_API_BASE_URL=https://nyay2kriya.onrender.com/api`
+
+### Backend - Render
+- Deployed at: **https://nyay2kriya.onrender.com**
+- Build command: `npm install`
+- Start command: `npm start`
+- Environment variables: `PORT`, `CORS_ORIGIN`, `GROQ_API_KEY`, `GROQ_MODEL`, `OCR_SPACE_API_KEY`
+
+### CORS Configuration
+Both development and production URLs are allowed:
+- Local: `http://localhost:5173`, `http://127.0.0.1:5173`
+- Production: `https://nyay2-kriya.vercel.app`, `https://nyay2kriya.onrender.com`
 
 ## API Endpoints
 
