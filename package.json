@@ -1,0 +1,18 @@
+{
+  "name": "nyay2kriya",
+  "version": "1.0.0",
+  "description": "Nyay2Kriya - Judgment Intelligence System",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && cd frontend && npm install && cd ../backend/server && npm install",
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend/server && npm run dev",
+    "build:frontend": "cd frontend && npm run build",
+    "build": "npm run build:frontend",
+    "preview": "cd frontend && npm run preview"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
