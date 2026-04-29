@@ -114,7 +114,7 @@ Backend: http://localhost:5000
 ### Backend - Render
 - Deployed at: **https://nyay2kriya.onrender.com**
 - Root Directory: `backend`
-- Build command: `npm install && cd server && npm install`
+- Build command: `cd server && npm ci`
 - Start command: `cd server && npm start`
 - Environment variables:
   - `PORT=5000`

@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "Nyay2Kriya Backend - Judgment Intelligence System",
   "main": "server/index.js",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "dev": "cd server && npm run dev",
-    "start": "cd server && npm start",
-    "postinstall": "cd server && npm install"
+    "start": "npm start --prefix server"
   },
   "keywords": [],
   "author": "",

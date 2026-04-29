@@ -16,7 +16,7 @@
    - **Name**: `nyay2kriya-backend`
    - **Runtime**: Node
    - **Root Directory**: `backend`
-   - **Build Command**: `npm install && cd server && npm install`
+   - **Build Command**: `cd server && npm ci`
    - **Start Command**: `cd server && npm start`
    - **Plan**: Free (or paid for better performance)
 

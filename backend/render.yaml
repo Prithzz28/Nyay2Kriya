@@ -3,7 +3,7 @@ services:
     name: nyay2kriya-backend
     runtime: node
     plan: free
-    buildCommand: npm install && cd server && npm install
+    buildCommand: cd server && npm ci
     startCommand: cd server && npm start
     envVars:
       - key: PORT
