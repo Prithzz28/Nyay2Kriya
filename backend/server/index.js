@@ -8,8 +8,8 @@ const { notFoundHandler, errorHandler } = require("./middleware/errorHandler");
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 4000;
-const allowedOrigins = (process.env.CORS_ORIGIN || "http://localhost:5173,http://127.0.0.1:5173")
+const PORT = process.env.PORT || 5000;
+const allowedOrigins = (process.env.CORS_ORIGIN || "http://localhost:5173,http://127.0.0.1:5173,https://nyay2-kriya.vercel.app")
   .split(",")
   .map((origin) => origin.trim())
   .filter(Boolean);
@@ -26,5 +26,5 @@ app.use(notFoundHandler);
 app.use(errorHandler);
 
 app.listen(PORT, () => {
-  console.log(`CCMS backend listening on port ${PORT}`);
+  console.log(`Server running on ${PORT}`);
 });
